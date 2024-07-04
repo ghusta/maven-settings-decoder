@@ -1,0 +1,19 @@
+= A tool to decrypt the passwords stored in maven settings.xml files
+
+Maven 2.1.0+ supports http://maven.apache.org/guides/mini/guide-encryption.html[server password encryption]
+This tool lets you decrypt these passwords as long as you have access to both the _settings.xml_ file and the _settings-security.xml_ file.
+
+To use it https://github.com/downloads/jelmerk/maven-settings-decoder/settings-decoder.zip[download] the compiled distributable
+or build it from source with
+
+----
+./mvn package
+----
+
+This will produce the executable jar file in `target`
+
+----
+usage: settings-decoder
+ -f,--settings <arg>            location of settings.xml file.
+ -s,--settings-security <arg>   location of settings-security.xml.
+----
