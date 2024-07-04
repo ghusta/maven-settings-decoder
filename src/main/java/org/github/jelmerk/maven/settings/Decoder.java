@@ -14,8 +14,8 @@ import org.sonatype.plexus.components.sec.dispatcher.model.SettingsSecurity;
 import org.apache.maven.settings.Settings;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 
 /**
@@ -77,7 +77,7 @@ public class Decoder {
 
     private static Settings readSettings(File file) throws IOException, XmlPullParserException {
         SettingsXpp3Reader reader = new SettingsXpp3Reader();
-        return reader.read(new FileInputStream(file));
+        return reader.read(Files.newInputStream(file.toPath()));
     }
 
     private static Options createOptions() {
