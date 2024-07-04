@@ -7,7 +7,7 @@ This tool lets you decrypt these passwords as long as you have access to both th
 To use it [download](https://github.com/downloads/jelmerk/maven-settings-decoder/settings-decoder.zip) the compiled distributable
 or build it from source with
 
-    ./gradlew
+    ./mvn package
 
 This will produce the distribution zip file in `build/distributions`
 
